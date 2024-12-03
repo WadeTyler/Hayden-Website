@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+  letter-spacing: .05rem;
+
+  --primary-color: #fff;
+  --secondary-color: #ebaa32;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x:hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, .6);
+  padding: .75rem;
+  position: fixed;
+  backdrop-filter: blur(.5rem);
+  box-shadow: 0 0px 8px #000;
+  z-index: 50;
+  gap: .25rem;
+  letter-spacing: .3rem !important;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
+}
+
+header nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: .3rem !important;
+
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+header p {
+  color: var(--secondary-color);
+  letter-spacing: .2rem !important;
+  padding-bottom: .25rem;
+  border-bottom: solid var(--secondary-color) 1px;
+
+}
+
+header nav a:hover {
+  transform: scale(.9);
+  color: var(--secondary-color);
+}
+
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, .6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes fadeInView {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rollInFromLeft {
+  from {
+    transform: translateX(-100%) rotate(-360deg);
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav a {
+    font-size: 1rem;
+  }
+}
